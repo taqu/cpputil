@@ -186,7 +186,7 @@ IPAddress4::IPAddress4(u32 address)
     string_[pos++] = '.';
     pos = print(pos, (address >> 8) & 0xFFU);
     string_[pos++] = '.';
-    pos = print(pos, (address >> 8) & 0xFFU);
+    pos = print(pos, (address >> 0) & 0xFFU);
     string_[pos] = '\0';
     CPPUTIL_ASSERT(pos < Size);
 }
